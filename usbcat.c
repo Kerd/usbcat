@@ -2,7 +2,7 @@
  * Simple utility used mostly to send AT commands to LTE modems in CDC mode under FreeBSD
  *
  * My ZTEWelink ME3630 LTE Modem (vid:0x19d2, pid:0x1476) didn't work well with 'usbconfig do_request' method
- * and i had to deal with if somehow. Seems bulk transfers do the job.
+ * and i had to deal with it somehow. Seems bulk transfers do the job.
  *
  * I used 'bulk' demo program by Joerg Wunsch as example and borrowed most of the code.
  * This utility is non optimal and not complete piece of code. Spent ~2h to write and test it just to be able
@@ -23,7 +23,7 @@
  *  WITH_DRAIN - if defined, will read and print data from IN_EP before sending to OUT_EP
  *
  * Result:
- *  0 - everything ok
+ *  0 - everything is ok
  *  1 - got no data from IN_EP after sending to OUT_EP
  *  2 - failed to send to OUT_EP
  *  3 - both, 1 and 2
