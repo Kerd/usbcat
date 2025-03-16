@@ -4,7 +4,7 @@ Communicate with USB devices using libusb library. Allow to specify input and ou
 ## Simple utility used mostly to send AT commands to LTE modems in CDC mode under FreeBSD
 
 My ZTEWelink ME3630 LTE Modem (vid:0x19d2, pid:0x1476) didn't work well with 'usbconfig do_request' method
-and i had to deal with if somehow. Seems bulk transfers do the job.
+and i had to deal with it somehow. Seems bulk transfers do the job.
 
 I used 'bulk' demo program by Joerg Wunsch as example and borrowed most of the code.
 This utility is non optimal and not complete piece of code. Spent ~2h to write and test it just to be able
