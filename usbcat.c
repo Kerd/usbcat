@@ -268,7 +268,8 @@ static int doit(struct libusb20_device *dev, int rd_ep, int wr_ep, unsigned long
 }
 
 static void usage(const char* app) {
-    fprintf(stderr, "Usage %s <VID> <PID> <OUT_EP> <IN_EP> [IN_TIMEOUT (ms)]", app);
+    fprintf(stderr, "usbcat 1.0 (C) 2025 by Kirill Kuteynikov.\n\n");
+    fprintf(stderr, "Usage %s <VID> <PID> <OUT_EP> <IN_EP> [IN_TIMEOUT (ms)]\n", app);	
     exit(EX_USAGE);
 }
 
