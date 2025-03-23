@@ -1,7 +1,7 @@
 # usbcat
 Communicate with USB devices using libusb library. Allow to specify input and output device endpoints, so don't need special devices. Wrote it to send AT commands to my LTE modem under FreeBSD
 
-## Simple utility used mostly to send AT commands to LTE modems in CDC mode under FreeBSD
+### Simple utility used mostly to send AT commands to LTE modems in CDC mode under FreeBSD
 
 My ZTEWelink ME3630 LTE Modem (vid:0x19d2, pid:0x1476) didn't work well with 'usbconfig do_request' method
 and i had to deal with it somehow. Seems bulk transfers do the job.
@@ -26,7 +26,7 @@ Environment variables:
  WITH_DEBUG - if defined, will print a bit of debug output
  WITH_DRAIN - if defined, will read and print data from IN_EP before sending to OUT_EP
 
-### Result:
+#### Process exit status:
  - 0: everything is ok
  - 1: got no data from IN_EP after sending to OUT_EP
  - 2: failed to send to OUT_EP
@@ -40,7 +40,7 @@ Environment variables:
 
 ## Examples:
 
-ME3630 got multiple intrafaces with 2-3 endpoints in each. So, AT command interface got OUT_EP=3 and IN_EP=0x84.
+ME3630 got multiple interfaces with 2-3 endpoints in each. To access AT command interface havde to use OUT_EP=3 and IN_EP=0x84.
 
 * Get endpoint addresses for OUT_EP and IN_EP from 'usbconfig' under FreeBSD. For ME3630 i used BULK OUT (3)/BULK IN (0x84) endpoints of Interface 2.
 
